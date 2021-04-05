@@ -2,10 +2,8 @@ package tn.windata.demo.service;
 
 import org.springframework.beans.factory.annotation.*;
 import org.springframework.stereotype.*;
-import tn.windata.demo.config.*;
 import tn.windata.demo.entities.*;
 import tn.windata.demo.repo.*;
-
 import java.util.*;
 @Service
 public class ClientServiceImpl implements IClientService{

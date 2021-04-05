@@ -20,6 +20,7 @@ public class clientController {
 		return ResponseEntity.ok(clientService.addClient(client));
 	}
 	
+	@GetMapping("/client")
 	public ResponseEntity<?> getClients () {
 		return ResponseEntity.ok(clientService.getClients());
 	}
