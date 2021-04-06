@@ -1,16 +1,15 @@
 package tn.windata.demo.entities;
 
 import lombok.*;
+import tn.windata.demo.entities.helper.*;
 
 import javax.persistence.*;
 
 
 @Data
-@AllArgsConstructor
-@NoArgsConstructor
 @ToString
 @MappedSuperclass
-public class Utilisateur {
+public abstract class Utilisateur extends Auditable<String> {
 	
 	private String nom;
 	private String prenom;
