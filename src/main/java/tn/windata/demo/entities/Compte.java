@@ -1,6 +1,7 @@
 package tn.windata.demo.entities;
 
 import lombok.*;
+import tn.windata.demo.entities.helper.*;
 
 
 import javax.persistence.*;
@@ -11,7 +12,7 @@ import javax.persistence.Entity;
 @AllArgsConstructor
 @NoArgsConstructor
 @ToString
-public class Compte {
+public class Compte extends Auditable<String> {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
