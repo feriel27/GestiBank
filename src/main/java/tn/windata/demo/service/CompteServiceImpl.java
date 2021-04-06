@@ -23,7 +23,7 @@ public class CompteServiceImpl implements ICompteService{
 
 	}
 	@Override
-	public Optional<Compte> getCompteById (Long id) {
-		return iCompteRepo.findById( id);
+	public Compte getCompteById (Long id) {
+		return iCompteRepo.findById( id).get();
 	}
 }
