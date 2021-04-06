@@ -1,11 +1,15 @@
 package tn.windata.demo.web;
 
+import java.util.List;
+import java.util.Map;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import tn.windata.demo.entities.Compte;
@@ -26,4 +30,11 @@ public class compteController {
 	public ResponseEntity<?> findCompte (@PathVariable Long id) {
 		return ResponseEntity.ok(CompteService.getCompteById(id));
 	}
+	
+	@GetMapping("/comptes/findComptesByClient/{id}")
+	public ResponseEntity<?> findListCompteByClient (@PathVariable Long id) {
+		
+		List<Compte> allComptes = CompteService.findAllByClient(id);
+			return ResponseEntity.ok(allComptes);
+		}
 }
