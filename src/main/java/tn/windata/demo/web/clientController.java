@@ -21,7 +21,7 @@ public class clientController {
 		return ResponseEntity.ok(clientService.addClient(client));
 	}
 	
-	@GetMapping("/client")
+	@GetMapping("/clients")
 	public ResponseEntity<?> getClients (@RequestParam(defaultValue = "0") int page,
 	                                     @RequestParam(defaultValue = "3") int size) {
 		Map<String, Object> allClients = clientService.getAllClients(page, size);
