@@ -6,6 +6,7 @@ import org.springframework.web.bind.annotation.*;
 import tn.windata.demo.entities.*;
 import tn.windata.demo.service.*;
 
+import java.util.*;
 
 
 @RestController
@@ -21,7 +22,14 @@ public class clientController {
 	}
 	
 	@GetMapping("/client")
-	public ResponseEntity<?> getClients () {
-		return ResponseEntity.ok(clientService.getClients());
+	public ResponseEntity<?> getClients (@RequestParam(defaultValue = "0") int page,
+	                                     @RequestParam(defaultValue = "3") int size) {
+		Map<String, Object> allClients = clientService.getAllClients(page, size);
+		return ResponseEntity.ok(allClients);
+	}
+	
+	@GetMapping("/clients/{value}")
+	public ResponseEntity<?> findClient (@PathVariable String value) {
+		return ResponseEntity.ok(clientService.findByEmailOrNomOrPrenomContaining(value));
 	}
 }
