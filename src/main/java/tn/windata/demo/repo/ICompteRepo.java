@@ -7,4 +7,6 @@ import tn.windata.demo.entities.Compte;
 
 @Repository
 public interface ICompteRepo extends JpaRepository<Compte,Long> {
+
+	Compte getCompteById(Long id);
 }
