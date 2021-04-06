@@ -23,7 +23,7 @@ public class Compte extends Auditable<String> {
 	private double mntAgios;
 	private double seuilRemuneration;
 	private double montantRemuneration;
-	@ManyToOne(fetch = FetchType.LAZY)
+	@ManyToOne(fetch = FetchType.EAGER)
 	private Client client;
 	
 }

@@ -23,7 +23,7 @@ public class compteController {
 	}
 
 	@GetMapping("/comptes/{id}")
-	public ResponseEntity<?> findClient (@PathVariable Long id) {
+	public ResponseEntity<?> findCompte (@PathVariable Long id) {
 		return ResponseEntity.ok(CompteService.getCompteById(id));
 	}
 }
