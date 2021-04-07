@@ -16,14 +16,9 @@ public class ClientServiceImpl implements IClientService{
 	
 	@Override
 	public Client addClient (Client client) {
-	
 		return iClientRepo.save(client);
 	}
 	
-	@Override
-	public List<Client> getClients () {
-		return iClientRepo.findAll();
-	}
 	
 	@Override
 	public List<Client> findByEmailOrNomOrPrenomContaining (String value) {
