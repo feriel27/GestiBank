@@ -15,7 +15,7 @@ import tn.windata.demo.entities.Compte;
 import tn.windata.demo.service.ICompteService;
 
 @RestController
-public class compteController {
+public class CompteController {
 	@Autowired
 	ICompteService CompteService;
 	
