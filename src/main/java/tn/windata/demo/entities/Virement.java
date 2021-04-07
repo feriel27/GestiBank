@@ -5,7 +5,7 @@ import lombok.*;
 import javax.persistence.*;
 
 @Entity
-@DiscriminatorValue("V")
+@DiscriminatorValue("VM")
 @Data
-public class Versement extends Operation {
+public class Virement extends Operation{
 }

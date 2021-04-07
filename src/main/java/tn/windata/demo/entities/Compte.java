@@ -6,6 +6,7 @@ import tn.windata.demo.entities.helper.*;
 
 import javax.persistence.*;
 import javax.persistence.Entity;
+import java.util.*;
 
 @Entity
 @Data

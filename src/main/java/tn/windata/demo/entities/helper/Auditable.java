@@ -3,6 +3,7 @@ package tn.windata.demo.entities.helper;
 import lombok.*;
 import org.springframework.data.annotation.*;
 import org.springframework.data.jpa.domain.support.*;
+import tn.windata.demo.entities.*;
 
 import javax.persistence.*;
 import java.util.*;
