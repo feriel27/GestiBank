@@ -3,9 +3,11 @@ package tn.windata.demo.entities;
 import lombok.*;
 import tn.windata.demo.entities.helper.*;
 
+import java.util.List;
 
 import javax.persistence.*;
-import javax.persistence.Entity;
+
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 @Entity
 @Data
@@ -25,5 +27,9 @@ public class Compte extends Auditable<String> {
 	private double montantRemuneration;
 	@ManyToOne(fetch = FetchType.EAGER)
 	private Client client;
+	
+	@OneToMany(mappedBy = "compte")
+	@JsonIgnore
+	private List<Request> requetes;
 	
 }
