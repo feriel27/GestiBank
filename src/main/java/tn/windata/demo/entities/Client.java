@@ -25,6 +25,12 @@ public class Client extends Utilisateur {
 	@OneToMany(mappedBy = "client")
 	@JsonIgnore
 	private List<Compte> comptes;
+	
+	@OneToMany(mappedBy = "client")
+	@JsonIgnore
+	private List<Request> requests;
+	
+	
 	@Override
 	public String toString() {
 		return "Client [id=" + id + ", pieceJustified=" + pieceJustified + "]";
