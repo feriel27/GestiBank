@@ -15,8 +15,6 @@ public class Request {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	private String status;
-	@ManyToOne(fetch = FetchType.EAGER)
-	private Client client;
 	
 	@ManyToOne(fetch = FetchType.EAGER)
 	private Compte compte;

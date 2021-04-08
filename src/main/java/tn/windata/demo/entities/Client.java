@@ -26,10 +26,7 @@ public class Client extends Utilisateur {
 	@JsonIgnore
 	private List<Compte> comptes;
 	
-	@OneToMany(mappedBy = "client")
-	@JsonIgnore
-	private List<Request> requests;
-	
+
 	
 	@Override
 	public String toString() {
