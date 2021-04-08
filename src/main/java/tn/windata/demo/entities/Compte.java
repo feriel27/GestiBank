@@ -27,7 +27,6 @@ public class Compte extends Auditable<String> {
 	private double montantRemuneration;
 	@ManyToOne(fetch = FetchType.EAGER)
 	private Client client;
-	
 	@OneToMany(mappedBy = "compte")
 	@JsonIgnore
 	private List<Request> requetes;
