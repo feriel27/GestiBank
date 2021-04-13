@@ -19,7 +19,6 @@ public class TransactionServiceImpl implements ITransactionService {
 	public Operation addTransaction (TransactionType operation, double montant, List<Compte> comptes) throws SoldeNotFoundException {
 		Compte compte1=compteRepo.findById(comptes.get(0).getId()).get();
 		
-		
 		switch (operation){
 			case RETRAIT : {
 				return iTransactionRepo.save(retrait(montant, compte1));

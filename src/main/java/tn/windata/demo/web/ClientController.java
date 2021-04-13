@@ -10,7 +10,7 @@ import java.util.*;
 
 
 @RestController
-public class clientController {
+public class ClientController {
 	
 	@Autowired
 	IClientService clientService;
